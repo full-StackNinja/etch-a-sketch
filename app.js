@@ -1,3 +1,4 @@
+//Ensure DOM Content is properly loaded before applying JS Code to them...
 document.addEventListener("DOMContentLoaded", ()=>{
     const divContainer = document.createElement("div");
     const btn = document.createElement("button");
@@ -35,18 +36,19 @@ than maximum limit of 100! Please enter grid size less than 100`,''));
     btn.addEventListener("click", ()=>{
         getGridSize(prompt("Enter Grid Size(max 100)", ''));
     })
+    // Initially set default grid size of "16x16"...
     getGridSize();
+    //Color generator using hash values...
     const colorGenerator = function(){
         const colorLetters = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
-    let colorCode = "";
-    for(let i=0; i<6; i++){
-        let randomNum = Math.floor(Math.random()*16);
-        colorCode+= colorLetters[randomNum];
+        let colorCode = "";
+        for(let i=0; i<6; i++){
+            let randomNum = Math.floor(Math.random()*16);
+            colorCode+= colorLetters[randomNum];
+        }
+        return colorCode;
     }
-    return colorCode;
-    }
-    colorGenerator()
-    // Event delegation to the parent element
+    // Add event delegation to the parent element...
     divContainer.addEventListener("mouseover", function(e){
         let hoveredChild = e.target;
         hoveredChild.style.backgroundColor = `#${colorGenerator()}`;
