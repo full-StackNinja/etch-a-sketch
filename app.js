@@ -50,8 +50,11 @@ than maximum limit of 100! Please enter grid size less than 100`,''));
     }
     // Add event delegation to the parent element...
     divContainer.addEventListener("mouseover", function(e){
-        let hoveredChild = e.target;
-        hoveredChild.style.backgroundColor = `#${colorGenerator()}`;
+        if(e.target !== divContainer){
+            console.log(`${e.target}`);
+            let hoveredChild = e.target;
+            hoveredChild.style.backgroundColor = `#${colorGenerator()}`;
+        }
     })
     divContainer.addEventListener("mouseout", function(e){
         let hoveredChild = e.target;
