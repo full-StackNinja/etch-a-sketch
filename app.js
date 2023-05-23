@@ -58,6 +58,6 @@ than maximum limit of 100! Please enter grid size less than 100`,''));
     })
     divContainer.addEventListener("mouseout", function(e){
         let hoveredChild = e.target;
-        hoveredChild.style.backgroundColor = "#b8b9b8";
+        hoveredChild.style.backgroundColor = "#112233";
     })  
     });
