@@ -8,7 +8,7 @@ html, body{
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    gap: 1px;
+    gap: 0px;
     min-width: 100vw;
     min-height: 100vh;
     background-color: #1287ff;
@@ -18,7 +18,21 @@ html, body{
     padding: 0;
     flex: 1 1 auto;
     box-sizing: border-box;
-    color: aliceblue;
-    background-color: #123454;
-
+    /* color: aliceblue; */
+    background-color: #b8b9b8;
+}
+button{
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 20px auto;
+    padding: 10px 10px;
+    color: #faf9f6;
+    background-color: #123212;
+    border-radius: 10px;
+}
+button:hover{
+    box-shadow: 0 0 5px 5px lightblue;
 }
