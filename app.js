@@ -21,8 +21,8 @@ than maximum limit of 100! Please enter grid size less than 100`,''));
         }
         else{
             const totalDivs = gridSize**2;
-            const divWidth = 100/gridSize-0.0;
-            const divHeight = 100/gridSize-0.0;
+            const divWidth = 100/gridSize;
+            const divHeight = 100/gridSize;
             for(let i=1; i<=totalDivs; i++){
                 let div = document.createElement("div");
                 div.classList.add("squareDiv")
