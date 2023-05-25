@@ -8,7 +8,7 @@ html, body{
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    gap: 0px;
+    gap: 1px;
     min-width: 100vw;
     min-height: 100vh;
     background-color: #1287ff;

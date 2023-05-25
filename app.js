@@ -26,7 +26,7 @@ than maximum limit of 100! Please enter grid size less than 100`,''));
             for(let i=1; i<=totalDivs; i++){
                 let div = document.createElement("div");
                 div.classList.add("squareDiv")
-                div.style.minWidth = `${divWidth}vw`;
+                div.style.minWidth = `calc(${divWidth}% - 1px)`
                 div.style.minHeight = `${divHeight}vh`;
                 divContainer.appendChild(div)
             }
@@ -50,14 +50,15 @@ than maximum limit of 100! Please enter grid size less than 100`,''));
     }
     // Add event delegation to the parent element...
     divContainer.addEventListener("mouseover", function(e){
-        if(e.target !== divContainer){
-            console.log(`${e.target}`);
+        if(e.target.className !== 'div-container'){
             let hoveredChild = e.target;
             hoveredChild.style.backgroundColor = `#${colorGenerator()}`;
         }
     })
     divContainer.addEventListener("mouseout", function(e){
+        if(e.target.className !== 'div-container'){
         let hoveredChild = e.target;
         hoveredChild.style.backgroundColor = "#112233";
+        }
     })  
     });
